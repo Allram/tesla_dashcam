@@ -1,11 +1,6 @@
 FROM willprice/nvidia-ffmpeg
 FROM python:3-alpine
 
-COPY --from=build-stage /tmp/fakeroot/bin /usr/local/bin
-COPY --from=build-stage /tmp/fakeroot/share /usr/local/share
-COPY --from=build-stage /tmp/fakeroot/include /usr/local/include
-COPY --from=build-stage /tmp/fakeroot/lib /usr/local/lib
-
 WORKDIR /usr/src/app/tesla_dashcam
 
 RUN apk add --no-cache --update gcc libc-dev linux-headers \
