@@ -1,4 +1,4 @@
-FROM jrottenberg/ffmpeg:3-nvidia
+FROM romansavrulin/ffmpeg-cuda-docker
 FROM python:3-alpine
 
 COPY --from=build-stage /tmp/fakeroot/bin /usr/local/bin
