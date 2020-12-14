@@ -1,4 +1,4 @@
-FROM ehendrix23/ffmpeg-alpine:4.0-buildstage as build-stage
+FROM lutris/ffmpeg-nvenc
 FROM python:3-alpine
 
 COPY --from=build-stage /tmp/fakeroot/bin /usr/local/bin
